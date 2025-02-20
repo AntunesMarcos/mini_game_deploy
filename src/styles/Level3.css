@@ -1,0 +1,200 @@
+.love-escape-room {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe6f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle h2 {
+    font-size: 24px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.options button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #e91e63;
+}
+
+.success-message, .final-message {
+    font-size: 24px;
+    color: #d63384;
+    margin-top: 20px;
+}
+
+.final-message button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.yes-button {
+    background-color: #81c784;
+    color: white;
+}
+
+.no-button {
+    background-color: #e57373;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.final-message {
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.love-escape-room {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe6f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle h2 {
+    font-size: 24px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.options button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #e91e63;
+}
+
+.success-message, .final-message, .location-details {
+    font-size: 24px;
+    color: #d63384;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.final-message button, .map-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.yes-button {
+    background-color: #81c784;
+    color: white;
+}
+
+.no-button {
+    background-color: #e57373;
+    color: white;
+}
+
+.map-button {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.location-logo {
+    width: 150px;
+    margin: 20px 0;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.feedback-message {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #d63384;
+    animation: popIn 0.5s ease;
+}
+
+.decline-message {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #e57373;
+    animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.love-escape-room {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe6f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle h2 {
+    font-size: 24px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.options button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #e91e63;
+}
