@@ -98,7 +98,7 @@ const Level3 = () => {
         setShowLocationDetails(true);
         setTimeout(() => {
             setMessageText("😄 Calma que tem mais!");
-            setTimeout(() => navigate('/Final'), 2000);
+            setTimeout(() => navigate('/'), 2000);
         }, 5500);
     };
 
@@ -121,7 +121,7 @@ const Level3 = () => {
         setTimeout(() => setShowLocationDetails(true), 1500);
         setTimeout(() => {
             setMessageText("😄 Calma que tem mais!");
-            setTimeout(() => navigate('/Final'), 2000);
+            setTimeout(() => navigate('/'), 2000);
         }, 5500);
     };
 
