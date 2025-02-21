@@ -120,7 +120,7 @@ const Level3 = () => {
             )}
 
             {isCompleted && !showFinalMessage && (
-                <div className="success-message">
+                <div className="success-message3">
                     🎉 Legal, né! Agora vem a parte mais importante... 💖
                 </div>
             )}

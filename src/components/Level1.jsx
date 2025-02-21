@@ -5,7 +5,7 @@ import '../styles/Level1.css';
 function Level1() {
     const navigate = useNavigate();
 
-    const emojis = ['💖', '🌸', '🍓', '🌟', '🐻', '🐧', '🦋', '🐢', '🍒', '🎈'];
+    const emojis = ['💖', '🍓', '🌟', '🐧', '🦋', '🍒'];
 
     const shuffleArray = (array) => {
         const newArray = [...array];
@@ -88,7 +88,7 @@ function Level1() {
                 ))}
             </div>
             {showMessage && (
-                <div className="success-message">
+                <div className="success-message1">
                     🌟💖 <strong>Uau!</strong> Você arrasou! 💖🌟 <br />
                     Você conseguiu encontrar todos os pares perfeitos, assim como eu encontrei você, minha gatinha! 🐱💘💞 <br />
                     Vamos seguir juntinhos para o próximo desafio? 🚀✨
