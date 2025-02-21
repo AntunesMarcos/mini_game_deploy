@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mini_game_deploy/static/css/main.af833d67.css",
-    "main.js": "/mini_game_deploy/static/js/main.7f1d60b3.js",
+    "main.js": "/mini_game_deploy/static/js/main.fe7faa64.js",
     "static/js/453.ec236d98.chunk.js": "/mini_game_deploy/static/js/453.ec236d98.chunk.js",
     "static/media/madero.png": "/mini_game_deploy/static/media/madero.faba0d01195ac7f72dff.png",
     "index.html": "/mini_game_deploy/index.html",
     "main.af833d67.css.map": "/mini_game_deploy/static/css/main.af833d67.css.map",
-    "main.7f1d60b3.js.map": "/mini_game_deploy/static/js/main.7f1d60b3.js.map",
+    "main.fe7faa64.js.map": "/mini_game_deploy/static/js/main.fe7faa64.js.map",
     "453.ec236d98.chunk.js.map": "/mini_game_deploy/static/js/453.ec236d98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af833d67.css",
-    "static/js/main.7f1d60b3.js"
+    "static/js/main.fe7faa64.js"
   ]
 }
