@@ -25,7 +25,7 @@ const Level2 = () => {
         if (wrongGuesses >= maxWrong) {
             setIsGameOver(true);
             setTimeout(() => {
-                navigate('/Level2'); // Redireciona para a página inicial após game over
+                window.location.reload();
             }, 2000);
         }
     }, [wrongGuesses, navigate]);
