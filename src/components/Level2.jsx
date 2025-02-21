@@ -29,7 +29,7 @@ const Level2 = () => {
     );
     const [guessedLetters, setGuessedLetters] = useState([]);
     const [wrongGuesses, setWrongGuesses] = useState(0);
-    const maxWrong = 10;
+    const maxWrong = 9;
     const [isWinner, setIsWinner] = useState(false);
     const [correctCount, setCorrectCount] = useState(0);
 
