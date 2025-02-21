@@ -114,6 +114,10 @@ p {
         padding: 10px;
         height: 70%;
     }
+    .success-message1 {
+        width: 330px;
+        font-size: 15px;
+    }
 }
 
 /* Celulares */
@@ -129,6 +133,10 @@ p {
     .level {
         padding: 10px;
         height: 70%;
+    }
+    .success-message1 {
+        width: 250px;
+        font-size: 13px;
     }
 }
 
