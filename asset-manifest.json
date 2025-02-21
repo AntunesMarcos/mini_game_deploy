@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mini_game_deploy/static/css/main.211468b0.css",
-    "main.js": "/mini_game_deploy/static/js/main.8b3a5e64.js",
+    "main.css": "/mini_game_deploy/static/css/main.427f082c.css",
+    "main.js": "/mini_game_deploy/static/js/main.e42d7b82.js",
     "static/js/453.ec236d98.chunk.js": "/mini_game_deploy/static/js/453.ec236d98.chunk.js",
     "static/media/madero.png": "/mini_game_deploy/static/media/madero.faba0d01195ac7f72dff.png",
     "index.html": "/mini_game_deploy/index.html",
-    "main.211468b0.css.map": "/mini_game_deploy/static/css/main.211468b0.css.map",
-    "main.8b3a5e64.js.map": "/mini_game_deploy/static/js/main.8b3a5e64.js.map",
+    "main.427f082c.css.map": "/mini_game_deploy/static/css/main.427f082c.css.map",
+    "main.e42d7b82.js.map": "/mini_game_deploy/static/js/main.e42d7b82.js.map",
     "453.ec236d98.chunk.js.map": "/mini_game_deploy/static/js/453.ec236d98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.211468b0.css",
-    "static/js/main.8b3a5e64.js"
+    "static/css/main.427f082c.css",
+    "static/js/main.e42d7b82.js"
   ]
 }
