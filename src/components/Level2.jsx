@@ -1,43 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Level2.css';
 import { useNavigate } from 'react-router-dom';
 
 const Level2 = () => {
     const navigate = useNavigate();
     const phrases = [
-        "Sorriso", "Carinho", "Abraco", "Alegria", "Encanto",
-        "Luz do dia", "Doce amor", "Coracao", "Melodia",
-        "Felicidade", "Aconchego", "Magia", "Leveza",
-        "Luz do sol", "Pureza", "Ceu azul"
+        "Sorriso",
+        "Carinho",
+        "Abraco",
+        "Alegria",
+        "Encanto",
+        "Luz do dia",
+        "Doce amor",
+        "Coracao",
+        "Melodia",
+        "Felicidade",
+        "Aconchego",
+        "Magia",
+        "Leveza",
+        "Luz do sol",
+        "Pureza",
+        "Ceu azul"
     ];
+
 
     const [secretPhrase, setSecretPhrase] = useState(
         phrases[Math.floor(Math.random() * phrases.length)].toUpperCase()
     );
     const [guessedLetters, setGuessedLetters] = useState([]);
     const [wrongGuesses, setWrongGuesses] = useState(0);
-    const maxWrong = 9;
+    const maxWrong = 10;
     const [isWinner, setIsWinner] = useState(false);
     const [correctCount, setCorrectCount] = useState(0);
-    const [isGameOver, setIsGameOver] = useState(false);
-
-    useEffect(() => {
-        if (wrongGuesses >= maxWrong) {
-            setIsGameOver(true);
-            setTimeout(() => {
-                window.location.reload();
-            }, 2000);
-        }
-    }, [wrongGuesses, navigate]);
 
     const handleGuess = (letter) => {
-        if (guessedLetters.includes(letter) || isGameOver || isWinner) return;
+        if (guessedLetters.includes(letter)) return;
 
         const updatedGuesses = [...guessedLetters, letter];
         setGuessedLetters(updatedGuesses);
 
         if (!secretPhrase.includes(letter)) {
-            setWrongGuesses((prev) => prev + 1);
+            setWrongGuesses(wrongGuesses + 1);
         }
 
         const hasWon = secretPhrase
@@ -57,13 +60,22 @@ const Level2 = () => {
                 setCorrectCount((prev) => {
                     const newCount = prev + 1;
                     if (newCount >= 2) {
-                        navigate('/level3'); // Redireciona para o próximo nível
+                        navigate('/Level3');
                     }
                     return newCount;
                 });
             }, 2000);
         }
     };
+
+    const isGameOver = wrongGuesses >= maxWrong;
+
+    if(isGameOver){
+        setTimeout(() =>{
+                window.location.reload();
+            }
+        , 2000);
+    }
 
     return (
         <div className="love-hangman">
@@ -90,7 +102,11 @@ const Level2 = () => {
             </div>
 
             <div className="hearts">
+
                 <div className="attempts">Tentativas restantes: {maxWrong - wrongGuesses}</div>
+
+            </div>
+            <div className="hearts">
                 {[...Array(maxWrong)].map((_, idx) => (
                     <span key={idx} className="heart">
                         {idx < maxWrong - wrongGuesses ? '❤️' : '💔'}
