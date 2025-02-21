@@ -7,24 +7,46 @@
     width: 80%;
     max-width: 500px;
     margin: auto;
+    font-family: 'Poppins', sans-serif;
 }
 
 .final h2 {
-    color: #ff4081;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.final p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
 .final button {
     background-color: #ff4081;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 24px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .final button:hover {
     background-color: #e73370;
+    transform: translateY(-2px);
 }
+
+.final button:active {
+    transform: translateY(0);
+}
+
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');

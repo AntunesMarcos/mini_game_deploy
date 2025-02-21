@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Importe o useNavigate
+import { useNavigate } from 'react-router-dom';
 import '../styles/Level3.css';
 import maderoLogo from '../asserts/madero.png';
+import emailjs from '@emailjs/browser';
 
 const Level3 = () => {
-    const navigate = useNavigate(); // ✅ Inicialize o hook aqui
+    const navigate = useNavigate();
 
     const [currentPuzzle, setCurrentPuzzle] = useState(0);
     const [isCompleted, setIsCompleted] = useState(false);
@@ -80,19 +81,47 @@ const Level3 = () => {
 
     // Quando clica em "Sim! 💖"
     const handleAccept = () => {
-        setShowLocationDetails(true);
-        setTimeout(() => {setMessageText("😄 Calma que tem mais!")
-            setTimeout(() => navigate('/Final'), 1000);
-        }, 5500);
+        const templateParams = {
+            subject: "💖 Convite Aceito!",
+            mensagem: "Que alegria! 💕 Você aceitou sair comigo! Mal posso esperar pelo nosso encontro. 🌟😊",
+        };
 
+        emailjs.send('service_j20m5yd', 'template_stnl2ta', templateParams, 'vlSXlJEJDQOfomHPD')
+            .then((response) => {
+                console.log('E-mail enviado com sucesso!', response.status, response.text);
+            })
+            .catch((err) => {
+                console.error('Erro ao enviar o e-mail:', err);
+            });
+
+        // Resto do código
+        setShowLocationDetails(true);
+        setTimeout(() => {
+            setMessageText("😄 Calma que tem mais!");
+            setTimeout(() => navigate('/Final'), 2000);
+        }, 5500);
     };
 
-    // Quando clica em "Não 😢"
     const handleDecline = () => {
+        const templateParams = {
+            subject: "💔 Convite Recusado",
+            mensagem: "Ahh, que triste! 😢 Mas quem sabe em uma próxima? 💖",
+        };
+
+        emailjs.send('service_j20m5yd', 'template_stnl2ta', templateParams, 'vlSXlJEJDQOfomHPD')
+            .then((response) => {
+                console.log('E-mail enviado com sucesso!', response.status, response.text);
+            })
+            .catch((err) => {
+                console.error('Erro ao enviar o e-mail:', err);
+            });
+
+        // Resto do código
         setDeclineMessage("😭 Ahh, que paia! Mas você não tem escolha, você vai kkk");
         setTimeout(() => setShowLocationDetails(true), 1500);
-        setTimeout(() => {setMessageText("😄 Calma que tem mais!")
-            setTimeout(() => navigate('/Final'), 1000);
+        setTimeout(() => {
+            setMessageText("😄 Calma que tem mais!");
+            setTimeout(() => navigate('/Final'), 2000);
         }, 5500);
     };
 
@@ -139,9 +168,9 @@ const Level3 = () => {
                     <h2>🎉 Nosso encontro será aqui! 🎉</h2>
                     <img src={maderoLogo} alt="Logo do Madero" className="location-logo" />
                     <h3>Restaurante Madero</h3>
-                    <p><strong>📅 Dia:</strong> Sábado, 15 de Julho</p>
+                    <p><strong>📅 Dia:</strong> Sábado, 22 de Fevereiro</p>
                     <p><strong>⏰ Horário:</strong> 19h30</p>
-                    <p><strong>📍 Endereço:</strong> Av. Central, 123 - Centro, Sua Cidade</p>
+                    <p><strong>📍 Endereço:</strong> R. Pacífico Mascarenhas, 134- piso 3</p>
                     <button className="map-button" onClick={handleOpenMap}>Abrir no Google Maps 📍</button>
                     {messageText && <p className="extra-message">{messageText}</p>}
                 </div>

@@ -7,7 +7,7 @@ const Level2 = () => {
     const phrases = [
         "Sorriso",
         "Carinho",
-        "Abraço",
+        "Abraco",
         "Alegria",
         "Encanto",
         "Luz do dia",
@@ -20,7 +20,7 @@ const Level2 = () => {
         "Leveza",
         "Luz do sol",
         "Pureza",
-        "Céu azul"
+        "Ceu azul"
     ];
 
 
@@ -69,6 +69,13 @@ const Level2 = () => {
     };
 
     const isGameOver = wrongGuesses >= maxWrong;
+
+    if(isGameOver){
+        setTimeout(() =>{
+                window.location.reload();
+            }
+        , 2000);
+    }
 
     return (
         <div className="love-hangman">
