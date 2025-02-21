@@ -3,8 +3,8 @@ import '../styles/Final.css';
 
 function Final() {
     const handleClick = () => {
-        const phoneNumber = '5533998062970'; // Substitua pelo seu número
-        const message = 'Olá! Quero embarcar nessa nova jornada com você! 💖';
+        const phoneNumber = '5533999374749'; // Substitua pelo seu número
+        const message = 'Acabei de ver o site e (Daqui pra frente, escreva a mensagem que você quer enviar)'; 
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
     };
